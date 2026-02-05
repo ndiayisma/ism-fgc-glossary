@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,6 +23,24 @@ export default function Home() {
           </li>
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
+          </li>
+          <li className="mt-2 tracking-[-.01em]">
+            <span className="font-semibold">Tip:</span> You can also use{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
+              app/layout.tsx
+            </code>{" "}
+            to change the layout of your app.
+          </li>
+          <li className="mt-2 tracking-[-.01em]">
+            5A&gt;2C&gt;dl.5C&gt;dl.jC&gt;j.2C&gt;66C&gt;dl.236B~6A&gt;md&gt;3B&gt;3C&gt;214B~4B~4B
+          </li>
+          <li className="mt-2 tracking-[-.01em]">
+            <Link
+              className="text-blue-500 hover:underline"
+              href="/archetypes/shoto"
+            >
+              Go to the About page
+            </Link>
           </li>
         </ol>
 
