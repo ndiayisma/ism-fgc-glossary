@@ -5,19 +5,24 @@ const bokor = Bokor({ subsets: ['latin'], weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
 
-export default function Shoto() {
+export default function Rushdown() {
     return (
         <div className="bg-gradient-to-br from-purple-950  to-blue-900 min-h-screen py-12">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 <div className="mb-8">
-                    <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>Rushdown</h1>
+                    <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>RUSHDOWN</h1>
                     <p className="mt-2 text-sm text-white-600">
-                        Les personnages de type "rushdown" se caractérisent par leur style de jeu agressif et leur capacité à mettre la pression sur l'adversaire.
+                        Les "Rushdown", comme son l'indique, est un style qui privilégie les attaques rapides et agressives au corps-à-corps, sans que l'adversaire puisse facilement réagir.
                         <br />
-                        Les Rushdown ont tendance à privilégier des attaques rapides au corps à corps, ayant des outils pour
-                        fermer la distance et maintenir une offensive sans échappatoire via des
-                        Mix-Ups afin de les faire hésiter à prendre une décision de les contrer(cross-up, low, throw, overhead).
+                        Comme outils pour raccourcir la distance et maintenir une offensive sans échappatoire, 
+                        ils utilisent beaucoup de Mix-Ups afin de les faire hésiter à prendre une décision de les 
+                        contrer(<strong>cross-up, low, throw, overhead</strong>).
                         <br />
+                        <br />
+                        Mais attention, car ce style de jeu est très risqué, et peut facilement se retourner contre vous si votre 
+                        adversaire parvient à anticiper vos mouvements ou à trouver une ouverture pour vous punir.
+                        <br />
+                        Et cela l'est encore plus avec les zoners, qui peuvent ainsi facilement camper et empêcher les rushdown de se rapprocher d'eux.
                         <br />
                         Cet archétypes est idéal pour les joueurs qui aiment jouer de manière offensive et voulant abattre l'ennemi.
                         Les exemples particuliers sont : </p>
