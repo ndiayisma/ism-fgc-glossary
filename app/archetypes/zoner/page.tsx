@@ -26,8 +26,10 @@ export default function Zoner() {
                         Les exemples particuliers sont : </p>
                     <ul className="list-disc list-inside mt-2 text-white-600">
                         <li>Dhalsim (Street Fighter)</li>
-                        <li>Axl (Guilty Gear Strive)</li>
+                        <li>Axl Low(Guilty Gear Strive)</li>
                         <li>Athena (The King of Fighters)</li>
+                        <li>Metera (Granblue Fantasy Versus)</li>
+                        <li>Caitlyn, Jinx(2XKO)</li>
                     </ul>
                     </div>
             </div>

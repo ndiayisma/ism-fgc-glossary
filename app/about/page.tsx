@@ -1,8 +1,14 @@
+import { Bokor } from "next/font/google";
+import { Roboto } from "next/font/google";
+
+const bokor = Bokor({ subsets: ['latin'], weight: '400' });
+const roboto = Roboto({ subsets: ['latin'], weight: '500' });
+
 export default function About() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>HYDE KIDO</h1>
+        <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>HYDE KIDO</h1>
         <p>Hyde est le personnage principal de la série Under Night In-Birth. Ce combattant est de type "shoto", utilisant des attaques de zonages et des techniques de combat rapproché en rapport à des situations variées.
           <br />
           
