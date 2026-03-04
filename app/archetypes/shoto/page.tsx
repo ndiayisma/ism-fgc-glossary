@@ -12,12 +12,11 @@ const characters = [
     portrait: "/characters/gokussj.png",
     gameLogo: "/games/dbfz_logo.png",
   },
-  // Placeholders pour les autres personnages (images à ajouter)
   {
     name: "Ryu",
     game: "Street Fighter 6",
-    portrait: "/next.svg", // Placeholder temporaire
-    gameLogo: "/next.svg",
+    portrait: "/characters/ryu.png", // Placeholder temporaire
+    gameLogo: "/games/sf6_logo.png",
   },
   {
     name: "Luke",
@@ -34,7 +33,7 @@ const characters = [
   {
     name: "Hyde",
     game: "Under Night In-Birth",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/hyde_uni2.png", // Placeholder temporaire
     gameLogo: "/games/uni2_logo.png", 
   },
   {

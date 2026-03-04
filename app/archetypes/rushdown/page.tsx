@@ -4,6 +4,39 @@ import { Roboto } from "next/font/google";
 const bokor = Bokor({ subsets: ['latin'], weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
+const characters = [
+    {
+        name: "Cammy",
+        game: "Street Fighter",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Chipp Zanuff",
+        game: "Guilty Gear Strive",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Ragna the Bloodedge",
+        game: "Séries BlazBlue",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Yamcha",
+        game: "Dragon Ball FighterZ",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Linne",
+        game: "Under Night In-Birth",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+];
+
 
 export default function Rushdown() {
     return (
