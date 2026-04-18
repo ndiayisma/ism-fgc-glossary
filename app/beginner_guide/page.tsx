@@ -122,6 +122,27 @@ export default function BeginnerGuide() {
                             se prennent plus de dégâts. Et encore, vous aurez donc ainsi une possibilité de faire des combos qui sont impossible à faire
                             en temps normal
                         </p>
+
+                        <br></br>
+
+                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Garde</h2>
+                        <p className="mt-2 text-sm text-white-600">
+                            Ca sert juste à se protéger et limiter les dégâts en maintenant la gauche (je vous conseille de maintenir le bas-gauche pour être sûr, 
+                            Sauf si vous jouez à SoulCalibur ou Mortal Kombat, là vous devez appuyer sur un bouton pour bloquer les attaques).
+                            Ceci est la base de la défense dans les jeux de combat, et il existe deux types de gardes : haute et basse.
+                            <br/>
+                            La garde haute est utilisée pour bloquer les attaques aériennes et les attaques qui frappent au-dessus de la taille, 
+                            tandis que la garde basse est utilisée pour bloquer les attaques qui frappent au niveau de la taille ou en dessous.
+                            <br/>
+                            Lorsque vous bloquez une attaque, vous subissez généralement moins de dégats et surtout, vous serez en état de "blockstun" pour un certain temps, 
+                            ce qui signifie que vous ne pouvez pas effectuer d'autres actions immédiatement après avoir bloqué une attaque.
+                            <br/>
+                            Il est important de noter que certaines attaques, comme les grabs (prises), 
+                            ne peuvent pas être bloquées et nécessitent une esquive (en sautant par exemple) 
+                            ou de contrer avec la même prise
+
+
+                        </p>
                     </p>
                 </div>
             </div>
