@@ -32,17 +32,24 @@ export default function BeginnerGuide() {
                             Par exemple, 6 signifie avancer vers l'avant si le personnage fait face à droite, ou reculer si le personnage fait face à gauche.
                             <br /><br />
                             Voici une liste des directions associées à chaque chiffre :
-                            <ul className="list-disc list-inside mt-2 text-white-600">
-                                <li>1 : Bas-Gauche</li>
-                                <li>2 : Bas</li>
-                                <li>3 : Bas-Droite</li>
-                                <li>4 : Gauche</li>
-                                <li>5 : Neutre</li>
-                                <li>6 : Droite</li>
-                                <li>7 : Haut-Gauche</li>
-                                <li>8 : Haut</li>
-                                <li>9 : Haut-Droite</li>
-                            </ul>
+                            <div className="justify-content mt-4 grid grid-cols-3 gap-2 w-fit">
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">7</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">8</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">9</div>
+                                
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">4</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">5</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">6</div>
+                                
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">1</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">2</div>
+                                <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">3</div>
+                            </div>
+                            <div className="mt-4 text-white-600 text-sm">
+                                <p><span className="font-bold">7:</span> Haut-Gauche | <span className="font-bold">8:</span> Haut | <span className="font-bold">9:</span> Haut-Droite</p>
+                                <p><span className="font-bold">4:</span> Gauche | <span className="font-bold">5:</span> Neutre | <span className="font-bold">6:</span> Droite</p>
+                                <p><span className="font-bold">1:</span> Bas-Gauche | <span className="font-bold">2:</span> Bas | <span className="font-bold">3:</span> Bas-Droite</p>
+                            </div>
                             <br /><br />
                             Cette numérotation est largement utilisée dans les communautés de jeux de combat pour décrire les mouvements et les attaques,
                             facilitant ainsi la communication entre les joueurs.
@@ -102,6 +109,19 @@ export default function BeginnerGuide() {
                                 et il ne peut pas effectuer d'autres actions immédiatement.
                             </li>
                         </ul>
+
+                        <br></br>
+
+                        <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Contre-Attaque</h2>
+                        <p className="mt-2 text-sm text-white-600">
+                            Les contres-attaque, comme son nom l'indique est de renvoyer le coup adverse. 
+                            Ou plus précisément, lorsque vous êtes en action d'attaque et que le votre touche en premier, 
+                            vous allez déclencher ce qui s'appelle un "Counter!". Pas de panique, lorsque vous le faites,
+                            certains jeux vous indique en criant "COUNTER" ou que çela affiche dans l'interface pour les combos.
+                            En faisant celà, votre adversaire auront un hitstun qui durera longtemps en fonction des coups et dans la majorité
+                            se prennent plus de dégâts. Et encore, vous aurez donc ainsi une possibilité de faire des combos qui sont impossible à faire
+                            en temps normal
+                        </p>
                     </p>
                 </div>
             </div>
