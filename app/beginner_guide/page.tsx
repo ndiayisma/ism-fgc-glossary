@@ -10,7 +10,7 @@ export default function BeginnerGuide() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 <div className="mb-8">
                     <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>Guide du Débutant</h1>
-                    <p className="mt-2 text-sm text-white-600">Vous débutez dans les jeux de combats ? Vous êtes intéressé par la commu FGC et aimer les moments hypes qui tourne autour des compétitions ?
+                    <div className="mt-2 text-sm text-white-600">Vous débutez dans les jeux de combats ? Vous êtes intéressé par la commu FGC et aimer les moments hypes qui tourne autour des compétitions ?
                         Vous avez besoin d'aide pour comprendre les bases et mécanique du genre et voulez vour surpasser davantage et relevez les défis ?
                         Pas de panique, bien que je sais peu de choses, le but est d'essayer de vous aider à mieux comprendre les termes et mécaniques de base
                         pour que vous puissiez mieux apprécier les jeux de combats et la commu FGC.
@@ -19,9 +19,10 @@ export default function BeginnerGuide() {
                         ou si vous voulez juste comprendre un terme en particulier.
                         <br></br>
 
-                        
+
                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Numérotation</h2>
-                        <p className="mt-2 text-sm text-white-600">
+                        <img src="/begiguide/numpad.png" alt="Numpad notation guide" className="mt-4 w-full max-w-md" />
+                        <div className="mt-2 text-sm text-white-600">
                             On va d'abord commencer par les termes en numérotation. Bien que cela puisse paraître compliqué, ceux qui ont un ordi savent de quoi ça parle
                             (enfin peut être)
                             Si vous avez un clavier, vous avez sûrement des boutons situés tout à droite de 1 à 9, avec des boutons pour les opérations des maths (+, -, *, /),
@@ -36,11 +37,11 @@ export default function BeginnerGuide() {
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">7</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">8</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">9</div>
-                                
+
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">4</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">5</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">6</div>
-                                
+
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">1</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">2</div>
                                 <div className="w-16 h-16 flex items-center justify-center border-2 border-white-600 rounded text-white-600 font-bold">3</div>
@@ -53,7 +54,7 @@ export default function BeginnerGuide() {
                             <br /><br />
                             Cette numérotation est largement utilisée dans les communautés de jeux de combat pour décrire les mouvements et les attaques,
                             facilitant ainsi la communication entre les joueurs.
-                        </p>
+                        </div>
 
                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Motions Input</h2>
                         <p className="mt-2 text-sm text-white-600">
@@ -109,41 +110,54 @@ export default function BeginnerGuide() {
                                 et il ne peut pas effectuer d'autres actions immédiatement.
                             </li>
                         </ul>
+                        <p className="mt-2 text-sm text-white-600">
+                            La frame data est cruciale pour comprendre les avantages et les désavantages de chaque attaque de son personnage,
+                            ainsi que pour planifier des stratégies de combat efficaces.
+                            En connaissant la frame data, les joueurs peuvent mieux anticiper les mouvements de leur adversaire,
+                            choisir les attaques appropriées à utiliser dans différentes situations,
+                            et optimiser leurs combos pour maximiser les dégâts infligés.
+                        </p>
+                        <img src="/begiguide/framedata-explaination.gif" alt="Frame Data Example" className="mt-4 w-full h-auto max-w-full rounded-base" />
+                        <p className="mt-2 text-xs text-white-600">
+                            Exemple : Le 2A d'Akali prend 7 frames avant d'atteindre l'active frame(vert). Après 3 frames actives(rouge), elle aura 12 frame de recovery(bleu). En parralèle, Braum se prend 13 frames de hitstun(cyan).
+                        </p>
 
                         <br></br>
 
                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Contre-Attaque</h2>
                         <p className="mt-2 text-sm text-white-600">
-                            Les contres-attaque, comme son nom l'indique est de renvoyer le coup adverse. 
-                            Ou plus précisément, lorsque vous êtes en action d'attaque et que le votre touche en premier, 
+                            Les contres-attaque, comme son nom l'indique est de renvoyer le coup adverse.
+                            Ou plus précisément, lorsque vous êtes en action d'attaque et que le votre touche en premier,
                             vous allez déclencher ce qui s'appelle un "Counter!". Pas de panique, lorsque vous le faites,
                             certains jeux vous indique en criant "COUNTER" ou que çela affiche dans l'interface pour les combos.
                             En faisant celà, votre adversaire auront un hitstun qui durera longtemps en fonction des coups et dans la majorité
                             se prennent plus de dégâts. Et encore, vous aurez donc ainsi une possibilité de faire des combos qui sont impossible à faire
                             en temps normal
                         </p>
+                        <video className="w-full h-auto max-w-full rounded-base" controls>
+                            <source src="/begiguide/Difference_Counter_NoCounter.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
 
                         <br></br>
 
-                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Garde</h2>
+                        <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Garde</h2>
                         <p className="mt-2 text-sm text-white-600">
-                            Ca sert juste à se protéger et limiter les dégâts en maintenant la gauche (je vous conseille de maintenir le bas-gauche pour être sûr, 
+                            Ca sert juste à se protéger et limiter les dégâts en maintenant la gauche (je vous conseille de maintenir le bas-gauche pour être sûr,
                             Sauf si vous jouez à SoulCalibur ou Mortal Kombat, là vous devez appuyer sur un bouton pour bloquer les attaques).
                             Ceci est la base de la défense dans les jeux de combat, et il existe deux types de gardes : haute et basse.
-                            <br/>
-                            La garde haute est utilisée pour bloquer les attaques aériennes et les attaques qui frappent au-dessus de la taille, 
+                            <br />
+                            La garde haute est utilisée pour bloquer les attaques aériennes et les attaques qui frappent au-dessus de la taille,
                             tandis que la garde basse est utilisée pour bloquer les attaques qui frappent au niveau de la taille ou en dessous.
-                            <br/>
-                            Lorsque vous bloquez une attaque, vous subissez généralement moins de dégats et surtout, vous serez en état de "blockstun" pour un certain temps, 
+                            <br />
+                            Lorsque vous bloquez une attaque, vous subissez généralement moins de dégats et surtout, vous serez en état de "blockstun" pour un certain temps,
                             ce qui signifie que vous ne pouvez pas effectuer d'autres actions immédiatement après avoir bloqué une attaque.
-                            <br/>
-                            Il est important de noter que certaines attaques, comme les grabs (prises), 
-                            ne peuvent pas être bloquées et nécessitent une esquive (en sautant par exemple) 
-                            ou de contrer avec la même prise
-
-
+                            <br />
+                            Il est important de noter que certaines attaques, comme les grabs (prises),
+                            ne peuvent pas être bloquées et nécessitent une esquive (en sautant par exemple)
+                            ou de contrer avec la même prise afin d'éviter de se faire prendre.
                         </p>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
