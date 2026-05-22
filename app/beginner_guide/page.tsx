@@ -125,11 +125,11 @@ export default function BeginnerGuide() {
                         <br></br>
 
                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Contre-Attaque</h2>
-                        <p className="mt-2 text-sm text-white-600">
+                        <p className="mt-2 text-sm text-white-600 mb-5">
                             Les contres-attaque, comme son nom l'indique est de renvoyer le coup adverse.
                             Ou plus précisément, lorsque vous êtes en action d'attaque et que le votre touche en premier,
                             vous allez déclencher ce qui s'appelle un "Counter!". Pas de panique, lorsque vous le faites,
-                            certains jeux vous indique en criant "COUNTER" ou que çela affiche dans l'interface pour les combos.
+                            certains jeux vous indique en criant "COUNTER" ou que çela affiche sur l'écran.
                             En faisant celà, votre adversaire auront un hitstun qui durera longtemps en fonction des coups et dans la majorité
                             se prennent plus de dégâts. Et encore, vous aurez donc ainsi une possibilité de faire des combos qui sont impossible à faire
                             en temps normal
@@ -138,6 +138,9 @@ export default function BeginnerGuide() {
                             <source src="/begiguide/Difference_Counter_NoCounter.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                        <p className="mt-2 text-xs text-white-600">
+                            Exemple : Le 2C ne permet pas de faire un combo après un 5/2D. Avec un counter, cela peut être possible vu du long hitstun que le coup inflige lors d'un counter.
+                        </p>
 
                         <br></br>
 
@@ -150,12 +153,37 @@ export default function BeginnerGuide() {
                             La garde haute est utilisée pour bloquer les attaques aériennes et les attaques qui frappent au-dessus de la taille,
                             tandis que la garde basse est utilisée pour bloquer les attaques qui frappent au niveau de la taille ou en dessous.
                             <br />
-                            Lorsque vous bloquez une attaque, vous subissez généralement moins de dégats et surtout, vous serez en état de "blockstun" pour un certain temps,
+                            Lorsque vous bloquez une attaque, vous subissez généralement moins de dégats et surtout, 
+                            vous serez en état de "blockstun" pour un certain temps,
                             ce qui signifie que vous ne pouvez pas effectuer d'autres actions immédiatement après avoir bloqué une attaque.
+                            En général, les attaques bloqués ont un blockstun en négatif, 
+                            signifiant que vous pouvez contre-attaquer plus facilement après avoir bloqué une attaque.
                             <br />
                             Il est important de noter que certaines attaques, comme les grabs (prises),
                             ne peuvent pas être bloquées et nécessitent une esquive (en sautant par exemple)
                             ou de contrer avec la même prise afin d'éviter de se faire prendre.
+                        </p>
+
+                        <br></br>
+
+                        <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Combos</h2>
+                        <p className="mt-2 text-sm text-white-600">
+                            Un combo est une séquence d'attaques qui permet d'enchainer plusieurs attaques sans que l'adversaire puisse réagir.
+                            Chaque jeux ont des séquences de combos propres à eux-même. Plus les séquences s'enchaînent, 
+                            plus les prochains coups seront réduits mais maximisent les dégâts par la suite. 
+                            Ce qui donne un damage scaling, c'est à dire que les dégâts de chaque attaque dans le combo sont 
+                            réduits en fonction du nombre d'attaques déjà effectuées dans le combo.
+                            Donc vous l'aurez compris,
+                            ce n'est pas juste pour maximiser les dégâts, 
+                            mais pour envoyer un message à votre adversaire que vous êtes en contrôle de la situation 
+                            et que vous pouvez faire ce que vous voulez. Et vivre aussi pour les caméras et les spectateurs, parce que 
+                            c'est toujours plus hype de voir un tout nouveau joli combo de 10 coups
+                            que juste un coup normal.
+                            <br/>
+                            Récemment, plusieurs jeux de combats ont introduit un système d'"auto-combo", 
+                            qui permet aux joueurs d'exécuter une séquence de combos en appuyant simplement sur un bouton d'attaque plusieurs fois.
+                            Cela rend les combos plus accessibles aux débutants, 
+                            mais cela donne aussi des idées de combos plus avancés avec.
                         </p>
                     </div>
                 </div>
