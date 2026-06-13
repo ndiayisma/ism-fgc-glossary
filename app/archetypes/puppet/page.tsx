@@ -65,8 +65,38 @@ export default function Puppet() {
                         personne ne vous en empêchera de le main.
                         <br/><br/>
                         </p>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+    {characters.map((char) => (
+      <div
+        key={char.name}
+        className="flex flex-col items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors"
+      >
+        {/* 1. Character Portrait */}
+        <div className="relative w-22 h-22 sm:w-24 sm:h-24 overflow-hidden rounded-lg">
+          <img
+            src={char.portrait}
+            alt={`Portrait de ${char.name}`}
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+
+        {/* 2. Character Name */}
+        <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>
+          {char.name}
+        </p>
+
+        {/* 3. Game Logo */}
+        <img
+          src={char.gameLogo}
+          alt={`Logo ${char.game}`}
+          className="h-12 w-auto object-contain opacity-70"
+        />
+      </div>
+    ))}                             
                 </div>
             </div>
         </div>
+        </div>
+                
     );
 }

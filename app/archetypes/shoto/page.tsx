@@ -21,14 +21,14 @@ const characters = [
   {
     name: "Luke",
     game: "Street Fighter 6", 
-    portrait: "/next.svg", // Placeholder temporaire
-    gameLogo: "/next.svg",
+    portrait: "/characters/luke.png", // Placeholder temporaire
+    gameLogo: "/games/sf6_logo.png",
   },
   {
     name: "Terry Bogard",
     game: "Fatal Fury",
-    portrait: "/next.svg", // Placeholder temporaire 
-    gameLogo: "/next.svg",
+    portrait: "/characters/terry.png", // Placeholder temporaire 
+    gameLogo: "/games/cotw_logo.png",
   },
   {
     name: "Hyde",
@@ -39,8 +39,8 @@ const characters = [
   {
     name: "Gran",
     game: "Granblue Fantasy Versus",
-    portrait: "/next.svg", // Placeholder temporaire
-    gameLogo: "/next.svg",
+    portrait: "/characters/gran.png", // Placeholder temporaire
+    gameLogo: "/games/gbvsr_logo.png",
   },
 ];
 

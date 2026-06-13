@@ -4,6 +4,45 @@ import { Roboto } from "next/font/google";
 const bokor = Bokor({ subsets: ['latin'], weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
+const characters = [
+    {
+        name: "Dhalsim",
+        game: "Street Fighter",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Axl Low",
+        game: "Guilty Gear Strive",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Athena",
+        game: "The King of Fighters",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Metera",
+        game: "Granblue Fantasy Versus",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Caitlyn",
+        game: "2XKO",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    },
+    {
+        name: "Megaman",
+        game: "Super Smash Bros Ultimate",
+        portrait: "/next.svg", // Placeholder temporaire
+        gameLogo: "/next.svg",
+    }
+];
+
 export default function Zoner() {
     return (
         <div className="min-h-screen py-12">
@@ -23,16 +62,40 @@ export default function Zoner() {
                         <br />
                         <br />
                         Ceux qui aiment jouer de manière stratégique et avoir un contrôle sur le terrain (pour pas dire camper), cet archétypes est idéal pour vous.
-                        Les exemples particuliers sont : </p>
-                    <ul className="list-disc list-inside mt-2 text-white-600">
-                        <li>Dhalsim (Street Fighter)</li>
-                        <li>Axl Low(Guilty Gear Strive)</li>
-                        <li>Athena (The King of Fighters)</li>
-                        <li>Metera (Granblue Fantasy Versus)</li>
-                        <li>Caitlyn, Jinx(2XKO)</li>
-                    </ul>
-                    </div>
+                        </p>
+                        <br />
+                    <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-8`}>Exemples de personnages Zoners :</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                        {characters.map((char) => (
+                            <div
+                                key={char.name}
+                                className="flex flex-col items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors"
+                            >
+                                {/* 1. Character Portrait */}
+        <div className="relative w-22 h-22 sm:w-24 sm:h-24 overflow-hidden rounded-lg">
+          <img
+            src={char.portrait}
+            alt={`Portrait de ${char.name}`}
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+
+        {/* 2. Character Name */}
+        <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>
+          {char.name}
+        </p>
+
+        {/* 3. Game Logo */}
+        <img
+          src={char.gameLogo}
+          alt={`Logo ${char.game}`}
+          className="h-12 w-auto object-contain opacity-70"
+        />
+      </div>
+    ))}                             
+                </div>
             </div>
+        </div>
         </div>
     );
 }
