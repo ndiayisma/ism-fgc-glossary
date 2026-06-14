@@ -1,122 +1,118 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({ subsets: ['latin'], weight: '700' });
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-          <li className="mt-2 tracking-[-.01em]">
-            <span className="font-semibold">Tip:</span> You can also use{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/layout.tsx
-            </code>{" "}
-            to change the layout of your app.
-          </li>
-          <li className="mt-2 tracking-[-.01em]">
-            5A&gt;2C&gt;dl.5C&gt;dl.jC&gt;j.2C&gt;66C&gt;dl.236B~6A&gt;md&gt;3B&gt;3C&gt;214B~4B~4B
-          </li>
-          <li className="mt-2 tracking-[-.01em]">
-            <Link
-              className="text-blue-500 hover:underline"
-              href="/archetypes/shoto"
-            >
-              Go to the About page
-            </Link>
-          </li>
-        </ol>
+  const categories = [
+    {
+      title: "Guide Débutants",
+      description: "Apprenez les bases et commencez votre voyage",
+      href: "/beginner_guide",
+      icon: "🎓",
+      color: "from-blue-500 to-purple-600",
+    },
+    {
+      title: "Archétypes",
+      description: "Découvrez les différents styles de jeu",
+      href: "/archetypes",
+      icon: "⚔️",
+      color: "from-red-500 to-orange-600",
+    },
+    {
+      title: "À propos",
+      description: "En savoir plus sur ce site",
+      href: "/about",
+      icon: "ℹ️",
+      color: "from-pink-500 to-rose-600",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-red-800 to-orange-700">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+        {/* Animated background elements */}
+        
+
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 className={`${orbitron.className} text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 animate-fade-in`}>
+              Bienvenue au kombat
+            </h1>
+
+            <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in animation-delay-200">
+              Maîtrisez les jeux de combat avec nos guides complets, nos archétypes de stratégie et nos tutoriels détaillés.
+            </p>
+
+            <div className="flex gap-4 justify-center flex-col sm:flex-row animate-fade-in animation-delay-400">
+              <Link
+                href="/beginner_guide"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 shadow-lg"
+              >
+                Commencer
+              </Link>
+              <Link
+                href="/archetypes"
+                className="px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400/10 rounded-lg font-semibold transition-all transform hover:scale-105"
+              >
+                Explorer les Archétypes
+              </Link>
+            </div>
+          </div>
+      </section>
+
+      {/* Categories Grid Section */}
+      <section className="relative px-4 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            Explorez notre contenu
+          </h2>
+          <p className="text-center text-gray-300 mb-16 text-lg">
+            Trouvez exactement ce dont vous avez besoin
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category, index) => (
+              <Link key={index} href={category.href}>
+                <div className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 hover:border-white/30 rounded-2xl p-8 h-full cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300"></div>
+
+                  <div className="relative z-10">
+                    <div className="text-5xl mb-4">{category.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      {category.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-6">
+                      {category.description}
+                    </p>
+                    <div className="inline-block text-purple-400 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                      En savoir plus →
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="relative px-4 py-16 border-t border-white/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Prêt à vous lancer ?
+          </h3>
+          <p className="text-gray-300 mb-8">
+            Rejoignez la FGC et commencez votre voyage dans le monde des jeux de combat dès aujourd'hui. Que vous soyez un débutant ou un joueur expérimenté, nous avons quelque chose pour vous.
+          </p>
+          <Link
+            href="/beginner_guide"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 shadow-lg"
+          >
+            Démarrer maintenant
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
