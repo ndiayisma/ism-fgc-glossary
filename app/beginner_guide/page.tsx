@@ -9,8 +9,8 @@ export default function BeginnerGuide() {
         <div className="min-h-screen py-12">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 <div className="mb-8">
-                    <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>Guide du Débutant</h1>
-                    <div className="mt-2 text-sm text-white-600">Vous débutez dans les jeux de combats ? Vous êtes intéressé par la commu FGC et aimer les moments hypes qui tourne autour des compétitions ?
+                    <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>Guide du Débutant</h1>
+                    <div className="mt-2 text-white-600 py-2">Vous débutez dans les jeux de combats ? Vous êtes intéressé par la commu FGC et aimer les moments hypes qui tourne autour des compétitions ?
                         Vous avez besoin d'aide pour comprendre les bases et mécanique du genre et voulez vour surpasser davantage et relevez les défis ?
                         Pas de panique, bien que je sais peu de choses, le but est d'essayer de vous aider à mieux comprendre les termes et mécaniques de base
                         pour que vous puissiez mieux apprécier les jeux de combats et la commu FGC.
@@ -22,7 +22,7 @@ export default function BeginnerGuide() {
 
                         <h2 className={`${roboto.className} text-2xl font-bold text-white-900 tracking-tight mt-4`}>Numérotation</h2>
                         <img src="/begiguide/numpad.png" alt="Numpad notation guide" className="mt-4 w-full max-w-md" />
-                        <div className="mt-2 text-sm text-white-600">
+                        <div className="mt-2 text-white-600">
                             On va d'abord commencer par les termes en numérotation. Bien que cela puisse paraître compliqué, ceux qui ont un ordi savent de quoi ça parle
                             (enfin peut être)
                             Si vous avez un clavier, vous avez sûrement des boutons situés tout à droite de 1 à 9, avec des boutons pour les opérations des maths (+, -, *, /),

@@ -30,8 +30,8 @@ export default function Stances() {
         <div className="min-h-screen py-12">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 <div className="mb-8">
-                    <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>Stances</h1>
-                    <p className="mt-2 text-sm text-white-600">
+                    <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>Stances</h1>
+                    <p className="mt-2 text-white-600 py-2">
                         Les stances sont des positions ou des postures spécifiques que les personnages adoptent dans les jeux de combats.
                         <br />
                         Ces positions peuvent influencer la façon dont un personnage se déplace, attaque ou défend, et peuvent également affecter les options disponibles pour le joueur,

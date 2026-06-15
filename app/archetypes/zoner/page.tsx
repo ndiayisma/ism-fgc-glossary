@@ -48,8 +48,8 @@ export default function Zoner() {
         <div className="min-h-screen py-12">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
                 <div className="mb-8">
-                    <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>Zoner</h1>
-                    <p className="mt-2 text-sm text-white-600">
+                    <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>Zoner</h1>
+                    <p className="mt-2 text-white-600 py-2">
                         Les Zoners sont les persos qui ont l'habitude de rester à l'écart et 
                         d'utiliser l'espace pour jeter des salves de projectiles et de contrôler le terrain.
                         <br />

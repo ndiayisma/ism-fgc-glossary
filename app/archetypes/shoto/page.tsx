@@ -49,8 +49,8 @@ export default function Shoto() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="mb-8">
-          <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>SHOTO</h1>
-          <p className="mt-2 text-sm text-white-600">
+          <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>SHOTO</h1>
+          <p className="mt-2 text-white-600 py-2">
             Les personnages de type standard, communément appelé "shoto" ou "All-Rounded", sont des personnages qui ont plus de polyvalence
             Ayant accès a des moves qui répondent à certaines situations. 
             Plus précisément, on les retrouves avec au moins une attaque de zonage (plus souvent des projectiles), un anti-air, et des attaques pour se rapprocher de l'adversaire.
