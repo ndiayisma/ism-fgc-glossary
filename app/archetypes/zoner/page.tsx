@@ -9,37 +9,37 @@ const characters = [
         name: "Dhalsim",
         game: "Street Fighter",
         portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        gameLogo: "/games/sf6_logo.svg",
     },
     {
         name: "Axl Low",
         game: "Guilty Gear Strive",
-        portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        portrait: "/characters/zoner/axl_low.png", // Placeholder temporaire
+        gameLogo: "/games/ggst_logo.png",
     },
     {
         name: "Athena",
         game: "The King of Fighters",
-        portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        portrait: "/characters/zoner/athena.png", // Placeholder temporaire
+        gameLogo: "/games/kofxv_logo.webp",
     },
     {
         name: "Metera",
         game: "Granblue Fantasy Versus",
-        portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        portrait: "/characters/zoner/metera.png", // Placeholder temporaire
+        gameLogo: "/games/gbvsr_logo.png",
     },
     {
         name: "Caitlyn",
         game: "2XKO",
-        portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        portrait: "/characters/zoner/caitlyn.jpg", // Placeholder temporaire
+        gameLogo: "/games/2xko_logo.png",
     },
     {
         name: "Megaman",
         game: "Super Smash Bros Ultimate",
         portrait: "/next.svg", // Placeholder temporaire
-        gameLogo: "/next.svg",
+        gameLogo: "/games/ssbu_logo.png",
     }
 ];
 

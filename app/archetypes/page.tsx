@@ -11,7 +11,7 @@ const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 const classicArchetypes = [
   {
     name: "Shoto",
-    subtitle: "All-Rounded",
+    subtitle: "Equilibré",
     description: "Des personnages polyvalents avec un équilibre entre attaque, défense et mobilité.",
     href: "/archetypes/shoto",
     icon: "/exemples/ryu-sf5-artwork.webp",
@@ -79,7 +79,7 @@ export default function Page() {
                   {/* Hover animation spans */}
                   <span className="absolute w-full h-full -top-0 -left-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
                   <span className="absolute w-full h-full -top-0 -left-0 bg-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
-                  <span className="absolute w-full h-full -top-0 -left-0 bg-indigo-600 scale-x-0 group-hover:scale-x-50 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                  <span className="absolute w-full h-full -top-0 -left-0 bg-indigo-600 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
 
                   {/* Explore Text on Hover */}
                   <span className="group-hover:opacity-100 opacity-0 absolute inset-0 z-30 flex items-center justify-center text-white font-bold text-lg drop-shadow-lg transition-opacity group-hover:duration-1000 duration-100 px-6 text-center">

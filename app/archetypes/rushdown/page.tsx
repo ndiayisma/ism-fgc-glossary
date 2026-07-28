@@ -12,7 +12,7 @@ const characters = [
         gameLogo: "/next.svg",
     },
     {
-        name: "Chipp Zanuff",
+        name: "Sol Badguy",
         game: "Guilty Gear Strive",
         portrait: "/next.svg", // Placeholder temporaire
         gameLogo: "/next.svg",
@@ -45,10 +45,10 @@ export default function Rushdown() {
                 <div className="mb-8">
                     <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>RUSHDOWN</h1>
                     <p className="mt-2 text-white-600 py-2">
-                        Les "Rushdown", comme son l'indique, est un style qui privilégie les attaques rapides et agressives au corps-à-corps, sans que l'adversaire puisse facilement réagir.
+                        Les "Rushdowns", comme son l'indique, est un style qui privilégie les attaques rapides et agressives au corps-à-corps, sans que l'adversaire puisse facilement réagir.
                         <br />
-                        Comme outils pour raccourcir la distance et maintenir une offensive sans échappatoire, 
-                        ils utilisent beaucoup de Mix-Ups afin de les faire hésiter à prendre une décision de les 
+                        Comme outils pour raccourcir la distance et maintenir une offensive sans échappatoire, ils attaquent sans relâche avec des coups qui sont en plus on-block.  
+                        Certains utilisent beaucoup de Mix-Ups afin de les faire hésiter à prendre une décision de les 
                         contrer(<strong>cross-up, low, throw, overhead</strong>).
                         <br />
                         <br />
