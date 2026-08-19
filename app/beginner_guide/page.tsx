@@ -10,6 +10,7 @@ const sections = [
     { id: "contre-attaque", label: "Contre-Attaque" },
     { id: "garde", label: "Garde" },
     { id: "combos", label: "Combos" },
+    { id: "discipline", label: "Discipline" },
 ];
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
@@ -53,7 +54,7 @@ export default function BeginnerGuide() {
                     </nav>
 
                     <Section id="numerotation" title="Numérotation">
-                        <img src="/begiguide/numpad.png" alt="Numpad notation guide" className="mb-4 w-full max-w-md rounded-lg" />
+                        <img src="/begiguide/numpad.png" alt="Numpad notation guide" className="mb-4 w-full max-w-md rounded-lg mx-auto" />
                         <p className="text-white/80 leading-relaxed">
                             On va d'abord commencer par les termes en numérotation. Bien que cela puisse paraître compliqué, ceux qui ont un ordi savent de quoi ça parle
                             (enfin, peut-être).
@@ -157,7 +158,7 @@ export default function BeginnerGuide() {
                             choisir les attaques appropriées à utiliser dans différentes situations,
                             et optimiser leurs combos pour maximiser les dégâts infligés.
                         </p>
-                        <img src="/begiguide/framedata-explaination.gif" alt="Frame Data Example" className="mt-4 w-full h-auto max-w-full rounded-lg" />
+                        <img src="/begiguide/FrameData-Explaination.gif" alt="Frame Data Example" className="mt-4 w-full h-auto max-w-full rounded-lg" />
                         <p className="mt-2 text-xs text-white/60">
                             Exemple : le 2A d'Akali prend 7 frames avant d'atteindre l'active frame (vert). Après 3 frames actives (rouge), elle aura 12 frames de recovery (bleu). En parallèle, Braum subit 13 frames de hitstun (cyan).
                         </p>
@@ -221,6 +222,21 @@ export default function BeginnerGuide() {
                             qui permet aux joueurs d'exécuter une séquence de combo en appuyant simplement plusieurs fois sur un bouton d'attaque.
                             Cela rend les combos plus accessibles aux débutants,
                             mais donne aussi des idées pour des combos plus avancés.
+                        </p>
+                    </Section>
+
+                    <Section id="discipline" title="Discipline">
+                        <img src="/memesIguess/az70ni.jpg" alt="Discipline Meme" className="mb-4 w-full max-w-md rounded-lg mx-auto py-3" />
+                        <p className="mt-2 text-xs text-white/60 text-center">
+                            Comparaison entre SonicFox, un joueur pro respecté dans la commu FGC, et LTG, juste un joueur détesté par la commu FGC pour des raisons abjectes.
+                        </p>
+                        <br /><br />
+                        <p className="text-white/80 leading-relaxed">
+                            Bon, ça c'est pas un terme technique, mais que tout le monde doit appliquer, même celui qui à fait ce site. Côntroler son esprit et avoir une discipline ferme est idéal pour mieux réussir pour ceux qui veulent aller plus loin dans les jeux de combats.
+                            <br /><br />
+                            Bien qu'il est vrai que perdre encore et encore crée une frustration infame (rage quit, trashtalk, etc.), il est important de se rappeler que la discipline est la clé pour progresser dans les jeux de combat.
+                            <br /><br />
+                            En fin de compte, la discipline est ce qui distingue les joueurs moyens des joueurs exceptionnels. C'est un élément clé pour atteindre un niveau compétitif et pour apprécier pleinement l'expérience des jeux de combat.
                         </p>
                     </Section>
                 </div>
