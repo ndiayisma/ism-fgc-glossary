@@ -1,11 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import Navbar from "../components/Navbar";
-import { Bokor } from "next/font/google";
 import { Roboto } from "next/font/google";
 
-const bokor = Bokor({ subsets: ['latin'], weight: '400' });
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
 const classicArchetypes = [
@@ -44,9 +40,9 @@ export default function Page() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="mb-8">
-          <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight mb-4`}>Archétypes de personnages</h1>
-          <p className="mt-2 text-white-600 py-2">
-            Dans les jeux de combat, les personnages sont souvent classés en différents archétypes en fonction de leur style de jeu, de leurs forces et de leurs faiblesses. 
+          <h1 className={`${roboto.className} text-5xl font-extrabold text-white tracking-tight mb-4`}>Archétypes de personnages</h1>
+          <p className="mt-2 text-white/80 leading-relaxed py-2">
+            Dans les jeux de combat, les personnages sont souvent classés en différents archétypes en fonction de leur style de jeu, de leurs forces et de leurs faiblesses.
             Ces archétypes aident les joueurs à comprendre les rôles que les personnages peuvent jouer dans un match et à choisir celui qui correspond le mieux à leur style de jeu.
             <br />
             Voici une liste des archétypes de personnages les plus courants que vous pouvez trouver dans les jeux de combat :
@@ -60,7 +56,7 @@ export default function Page() {
                 className="group"
               >
                 <button
-                  className="overflow-hidden relative w-full h-64 bg-black text-white border-none rounded-md text-3xl font-bold cursor-pointer z-10 group"
+                  className="overflow-hidden relative w-full h-64 bg-black text-white border border-white/10 rounded-xl text-3xl font-bold cursor-pointer z-10 group"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${archetype.icon})`,
                     backgroundSize: 'cover',

@@ -1,11 +1,8 @@
-import { Bokor } from "next/font/google";
-import { Roboto } from "next/font/google";
-
-const bokor = Bokor({ subsets: ['latin'], weight: '400' });
-const roboto = Roboto({ subsets: ['latin'], weight: '500' });
+import ArchetypeLayout from "../../components/archetypes/ArchetypeLayout";
+import CharacterGrid, { Character } from "../../components/archetypes/CharacterGrid";
 
 // Données des personnages de type Shoto
-const characters = [
+const characters: Character[] = [
   {
     name: "Son Goku SSJ",
     game: "Dragon Ball FighterZ",
@@ -27,7 +24,7 @@ const characters = [
   {
     name: "Terry Bogard",
     game: "Fatal Fury",
-    portrait: "/characters/terry.png", // Placeholder temporaire 
+    portrait: "/characters/terry.png", // Placeholder temporaire
     gameLogo: "/games/cotw_logo.png",
   },
   {
@@ -46,79 +43,37 @@ const characters = [
 
 export default function Shoto() {
   return (
-    <div className="min-h-screen py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <div className="mb-8">
-          <h1 className={`${roboto.className} text-5xl font-extrabold text-white-900 tracking-tight`}>SHOTO</h1>
-          <div className="flex flex-row gap-6 items-start">
-            <div className="max-w-md w-full flex-shrink-0">
-              <img src="/exemples/DBFZ_cover_art.jpg" alt="Shoto" className="w-full object-cover rounded-lg mt-4" />
-              <p className={`${roboto.className} text-xs text-white/70 mt-2`}>Vous verrez le personnage dans la jaquette en premier plan, c'est lui LE SHOTO</p>
-            </div>
-
-            <p className="text-white-600 py-2 flex-1">
-              Les personnages de type standard, communément appelé "Shoto" ou "All-Rounded", sont des personnages qui ont plus de polyvalence
-              Ayant accès a des moves qui répondent à certaines situations.
-              Plus précisément, on les retrouves avec au moins une attaque de zonage (plus souvent des projectiles), un anti-air, et des attaques pour se rapprocher de l'adversaire.
-              <br />
-              <br />
-              En bref, ils n'ont pas de points forts sur les outils qu'ils ont, mais n'ont pas aussi beaucoup de points faibles que les autres archétypes, ce qui les rend plus équilibrés et plus faciles à jouer pour les débutants.
-              <br />
-              Le terme "shoto" vient du shotokan karaté, un art martial japonais et qui est utilisé comme inspiration pour les 2 personnages de Street Fighter, Ryu et Ken.
-
-              <br />
-              <br />
-              Après, ce qui est difficile avec cet archétypes et de savoir si un personnage est un shoto ou pas.
-              Car bien que Ryu et Ken en soient les primes exemples dans Street Fighter,
-              c'est plus difficile de le savoir si on a lu le kit de Sakura par exemple ou de Sagat,
-              comme ils ont des outilis qui peuvent les faires apparentés à cet archétypes en question.
-              Alors pour faire simple, on prend les perso principal, les protagonistes de chaque jeu de combat afin de les reconnaîtres.
-
-              <br />
-              <br />
-
-              En bref, Les shotos sont des personnages équilibrés qui sont plus optés pour ceux qui débutent dans les jeux de combats
-              afin de comprendre les bases du neutral et plan de jeux
-
-              <br />
-              <br />
-
-            </p>
-          </div>
-          <h2 className={`${roboto.className} text-2xl font-bold text-white py-4 mt-8`}>
-            Exemples de Personnages Shotos
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-            {characters.map((char) => (
-              <div
-                key={char.name}
-                className="flex flex-col items-center gap-3 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors"
-              >
-                {/* 1. Character Portrait */}
-                <div className="relative w-22 h-22 sm:w-24 sm:h-24 overflow-hidden rounded-lg">
-                  <img
-                    src={char.portrait}
-                    alt={`Portrait de ${char.name}`}
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-
-                {/* 2. Character Name */}
-                <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>
-                  {char.name}
-                </p>
-
-                {/* 3. Game Logo */}
-                <img
-                  src={char.gameLogo}
-                  alt={`Logo ${char.game}`}
-                  className="h-12 w-auto object-contain opacity-70"
-                />
-              </div>
-            ))}
-          </div>
+    <ArchetypeLayout title="Shoto" subtitle="Équilibré">
+      <div className="flex flex-col md:flex-row gap-6 items-start mt-4">
+        <div className="max-w-md w-full flex-shrink-0 mx-auto md:mx-0">
+          <img src="/exemples/DBFZ_cover_art.jpg" alt="Shoto" className="w-full object-cover rounded-lg" />
+          <p className="text-xs text-white/60 mt-2">Vous verrez le personnage dans la jaquette en premier plan, c'est lui LE SHOTO</p>
         </div>
+
+        <p className="text-white/80 leading-relaxed flex-1">
+          Les personnages de type standard, communément appelé "Shoto" ou "All-Rounded", sont des personnages qui ont plus de polyvalence.
+          Ayant accès à des moves qui répondent à certaines situations,
+          plus précisément, on les retrouve avec au moins une attaque de zonage (le plus souvent des projectiles), un anti-air, et des attaques pour se rapprocher de l'adversaire.
+          <br />
+          <br />
+          En bref, ils n'ont pas de points forts sur les outils qu'ils ont, mais n'ont pas non plus beaucoup de points faibles comparé aux autres archétypes, ce qui les rend plus équilibrés et plus faciles à jouer pour les débutants.
+          <br />
+          Le terme "shoto" vient du shotokan karaté, un art martial japonais qui est utilisé comme inspiration pour deux personnages de Street Fighter, Ryu et Ken.
+          <br />
+          <br />
+          Après, ce qui est difficile avec cet archétype, c'est de savoir si un personnage est un shoto ou pas.
+          Car bien que Ryu et Ken en soient les premiers exemples dans Street Fighter,
+          c'est plus difficile de le savoir si on lit le kit de Sakura par exemple ou de Sagat,
+          car ils ont des outils qui peuvent les faire apparentés à cet archétype.
+          Alors pour faire simple, on prend le perso principal, le protagoniste de chaque jeu de combat afin de les reconnaître.
+          <br />
+          <br />
+          En bref, les shotos sont des personnages équilibrés, plus adaptés à ceux qui débutent dans les jeux de combat
+          afin de comprendre les bases du neutral et du plan de jeu.
+        </p>
       </div>
-    </div>
+
+      <CharacterGrid title="Exemples de Personnages Shotos" characters={characters} />
+    </ArchetypeLayout>
   );
 }
