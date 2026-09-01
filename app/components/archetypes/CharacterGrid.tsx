@@ -32,7 +32,7 @@ export default function CharacterGrid({
         {characters.map((char) => (
           <div
             key={char.name}
-            className="flex flex-col items-center gap-3 w-32 sm:w-36 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 transition-colors"
+            className="flex flex-col items-center gap-3 w-32 sm:w-36 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
           >
             {/* 1. Character Portrait */}
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 overflow-hidden rounded-lg bg-white/5">

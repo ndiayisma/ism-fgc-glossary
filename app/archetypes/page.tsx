@@ -56,7 +56,7 @@ export default function Page() {
                 className="group"
               >
                 <button
-                  className="overflow-hidden relative w-full h-64 bg-black text-white border border-white/10 rounded-xl text-3xl font-bold cursor-pointer z-10 group"
+                  className="overflow-hidden relative w-full h-64 bg-black text-white border border-white/10 hover:border-white/30 rounded-xl text-3xl font-bold cursor-pointer z-10 group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${archetype.icon})`,
                     backgroundSize: 'cover',
@@ -74,8 +74,8 @@ export default function Page() {
 
                   {/* Hover animation spans */}
                   <span className="absolute w-full h-full -top-0 -left-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
-                  <span className="absolute w-full h-full -top-0 -left-0 bg-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
-                  <span className="absolute w-full h-full -top-0 -left-0 bg-indigo-600 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                  <span className="absolute w-full h-full -top-0 -left-0 bg-purple-500 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                  <span className="absolute w-full h-full -top-0 -left-0 bg-gradient-to-r from-purple-700 to-pink-600 scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
 
                   {/* Explore Text on Hover */}
                   <span className="group-hover:opacity-100 opacity-0 absolute inset-0 z-30 flex items-center justify-center text-white font-bold text-lg drop-shadow-lg transition-opacity group-hover:duration-1000 duration-100 px-6 text-center">

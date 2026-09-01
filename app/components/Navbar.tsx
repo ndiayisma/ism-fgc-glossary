@@ -43,12 +43,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg border-b">
+    <nav className="sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <Link href="/" className="text-xl font-bold text-gray-900 hover:text-indigo-600 transition-colors">
+            <Link href="/" className="text-xl font-bold text-white hover:text-purple-300 transition-colors">
               BegiGuide
             </Link>
 
@@ -63,8 +63,8 @@ const Navbar = () => {
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`${
                         pathname.startsWith(item.href)
-                          ? 'border-indigo-500 text-gray-900'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                          ? 'border-purple-400 text-white'
+                          : 'border-transparent text-white/60 hover:border-white/30 hover:text-white'
                       } inline-flex items-center gap-1 px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200 h-16`}
                     >
                       {item.label}
@@ -82,8 +82,8 @@ const Navbar = () => {
 
                     {/* Dropdown: visible on hover OR when clicked open */}
                     <div
-                      className={`absolute left-0 top-full w-48 bg-white rounded-md shadow-lg border z-10
-                        transition-all duration-200 
+                      className={`absolute left-0 top-full w-48 bg-[#1a0a2e] rounded-md shadow-lg border border-white/10 z-10
+                        transition-all duration-200
                         ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-1'}
                         group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                       `}
@@ -93,20 +93,20 @@ const Navbar = () => {
                         <Link
                           href={item.href}
                           className={`${
-                            pathname === item.href ? 'bg-indigo-50 text-indigo-700' : 'text-gray-700 hover:bg-gray-50'
+                            pathname === item.href ? 'bg-purple-500/20 text-purple-300' : 'text-white/70 hover:bg-white/10'
                           } block px-4 py-2 text-sm font-medium transition-colors duration-200`}
                         >
                           Tous les archétypes
                         </Link>
-                        <div className="border-t my-1" />
+                        <div className="border-t border-white/10 my-1" />
                         {item.subItems.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
                             className={`${
                               pathname === subItem.href
-                                ? 'bg-indigo-50 text-indigo-700'
-                                : 'text-gray-700 hover:bg-gray-50'
+                                ? 'bg-purple-500/20 text-purple-300'
+                                : 'text-white/70 hover:bg-white/10'
                             } block px-4 py-2 text-sm transition-colors duration-200`}
                           >
                             {subItem.label}
@@ -121,8 +121,8 @@ const Navbar = () => {
                     href={item.href}
                     className={`${
                       pathname === item.href
-                        ? 'border-indigo-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        ? 'border-purple-400 text-white'
+                        : 'border-transparent text-white/60 hover:border-white/30 hover:text-white'
                     } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors duration-200 h-16`}
                   >
                     {item.label}
@@ -136,7 +136,7 @@ const Navbar = () => {
           <div className="sm:hidden flex items-center">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-400 transition-colors"
               aria-controls="mobile-menu"
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -158,7 +158,7 @@ const Navbar = () => {
 
       {/* 4. Mobile menu with slide animation via grid-rows trick */}
       <div
-        className={`sm:hidden border-t overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out grid ${
+        className={`sm:hidden border-t border-white/10 overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out grid ${
           mobileMenuOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
         }`}
         id="mobile-menu"
@@ -196,8 +196,8 @@ function MobileNavItem({
             onClick={() => setOpen(!open)}
             className={`${
               isActive
-                ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
-                : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+                ? 'bg-purple-500/10 border-purple-400 text-purple-300'
+                : 'border-transparent text-white/60 hover:bg-white/5 hover:border-white/20 hover:text-white'
             } w-full flex items-center justify-between pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors`}
           >
             {item.label}
@@ -220,7 +220,7 @@ function MobileNavItem({
               <Link
                 href={item.href}
                 className={`${
-                  pathname === item.href ? 'text-indigo-700 bg-indigo-50' : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                  pathname === item.href ? 'text-purple-300 bg-purple-500/10' : 'text-white/60 hover:text-white hover:bg-white/5'
                 } block pl-8 pr-4 py-2 text-sm font-medium transition-colors`}
               >
                 Tous les archétypes
@@ -231,8 +231,8 @@ function MobileNavItem({
                   href={subItem.href}
                   className={`${
                     pathname === subItem.href
-                      ? 'text-indigo-700 bg-indigo-50'
-                      : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                      ? 'text-purple-300 bg-purple-500/10'
+                      : 'text-white/60 hover:text-white hover:bg-white/5'
                   } block pl-8 pr-4 py-2 text-sm font-medium transition-colors`}
                 >
                   {subItem.label}
@@ -246,8 +246,8 @@ function MobileNavItem({
           href={item.href}
           className={`${
             isActive
-              ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
-              : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
+              ? 'bg-purple-500/10 border-purple-400 text-purple-300'
+              : 'border-transparent text-white/60 hover:bg-white/5 hover:border-white/20 hover:text-white'
           } block pl-3 pr-4 py-2 border-l-4 text-base font-medium transition-colors`}
         >
           {item.label}

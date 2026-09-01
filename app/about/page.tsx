@@ -1,17 +1,9 @@
 import { Roboto } from "next/font/google";
 
 import GameStyleFilter from "../components/about/GameStyleFilter";
+import Section from "../components/Section";
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
-
-function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
-    return (
-        <section id={id} className="scroll-mt-24 mt-8 rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8">
-            <h2 className={`${roboto.className} text-2xl font-bold text-white tracking-tight mb-4`}>{title}</h2>
-            {children}
-        </section>
-    );
-}
 
 export default function About() {
   return (

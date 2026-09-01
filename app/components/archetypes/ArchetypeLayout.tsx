@@ -25,7 +25,9 @@ export default function ArchetypeLayout({
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-2 text-white/60 uppercase tracking-wide text-sm">{subtitle}</p>
+            <span className="mt-3 inline-block rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-300">
+              {subtitle}
+            </span>
           )}
           {children}
         </div>
