@@ -35,7 +35,7 @@ const characters: Character[] = [
   {
     name: "Megaman",
     game: "Super Smash Bros Ultimate",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/zoner/rockman_ssbu.png",
     gameLogo: "/games/ssbu_logo.png",
   },
 ];
