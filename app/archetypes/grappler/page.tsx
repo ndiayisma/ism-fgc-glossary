@@ -5,37 +5,43 @@ const characters: Character[] = [
   {
     name: "Zangief",
     game: "Street Fighter",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/zangief.png", // Placeholder temporaire
     gameLogo: "/games/sf6_logo.png",
+  },
+  {
+    name: "Tizoc",
+    game: "Fatal Fury : City of the Wolves",
+    portrait: "/characters/grappler/tizoc.png", // Placeholder temporaire
+    gameLogo: "/games/cotw_logo.png",
   },
   {
     name: "Potemkin",
     game: "Guilty Gear Strive",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/potemkin.png",
     gameLogo: "/games/ggst_logo.png",
   },
   {
     name: "Iron Tager",
     game: "BlazBlue",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/tager.png",
     gameLogo: "/games/bbcf_logo.png",
   },
   {
     name: "Broly(Z)",
     game: "Dragon Ball FighterZ",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/broly.png",
     gameLogo: "/games/dbfz_logo.png",
   },
   {
     name: "Waldestein",
     game: "Under Night In-Birth",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/waldstein.png",
     gameLogo: "/games/uni2_logo.png",
   },
   {
     name: "Ladiva",
     game: "Granblue Fantasy Versus",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/fastiva.png",
     gameLogo: "/games/gbvsr_logo.png",
   },
   {
@@ -50,19 +56,19 @@ const advancedCharacters: Character[] = [
   {
     name: "Alex",
     game: "Street Fighter 6",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/alex.png", 
     gameLogo: "/games/sf6_logo.png",
   },
   {
     name: "Bullet",
     game: "BlazBlue : ChronoPhantasma & CentralFiction",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/bullet.png", 
     gameLogo: "/games/bbcf_logo.png",
   },
   {
     name: "Goku (Arc Saiyan)",
     game: "Dragon Ball FighterZ",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/grappler/baseku.png",
     gameLogo: "/games/dbfz_logo.png",
   },
 ];

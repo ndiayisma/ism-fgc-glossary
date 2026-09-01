@@ -5,32 +5,44 @@ const characters: Character[] = [
   {
     name: "Cammy",
     game: "Street Fighter",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/rushdown/cammy.png", 
     gameLogo: "/games/sf6_logo.png",
   },
   {
     name: "Sol Badguy",
     game: "Guilty Gear Strive",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/rushdown/solbadguy.png", 
     gameLogo: "/games/ggst_logo.png",
   },
   {
     name: "Ragna the Bloodedge",
-    game: "Séries BlazBlue",
-    portrait: "/next.svg", // Placeholder temporaire
+    game: "The King of Fighters XV",
+    portrait: "/characters/rushdown/ragna.png", 
     gameLogo: "/games/bbcf_logo.png",
   },
   {
     name: "Yamcha",
     game: "Dragon Ball FighterZ",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/rushdown/yamcha.png", 
     gameLogo: "/games/dbfz_logo.png",
   },
   {
     name: "Linne",
     game: "Under Night In-Birth",
-    portrait: "/next.svg", // Placeholder temporaire
+    portrait: "/characters/rushdown/linne.png", 
     gameLogo: "/games/uni2_logo.png",
+  },
+  {
+    name: "Kim Dong Hwan",
+    game: "Fatal Fury : City of the Wolves",
+    portrait: "/characters/rushdown/dong_hwan.png", 
+    gameLogo: "/games/cotw_logo.png",
+  },
+  {
+    name: "Wolverine",
+    game: "Marvel Tokon : Fighting Souls",
+    portrait: "/characters/rushdown/wolverine.png", 
+    gameLogo: "/games/mtfs_logo.png",
   },
 ];
 
