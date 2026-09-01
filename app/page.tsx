@@ -37,11 +37,11 @@ export default function Home() {
 
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <h1 className={`${orbitron.className} text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 animate-fade-in`}>
-              Bienvenue au kombat
+              BegiGuide : Guide pour ainsi entrer dans le FGC
             </h1>
 
             <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in animation-delay-200">
-              Maîtrisez les jeux de combat avec nos guides complets, nos archétypes de stratégie et nos tutoriels détaillés.
+              Maîtrisez les jeux de combat avec un guide adaptés aux débutants, nos archétypes de stratégie et nos tutoriels détaillés.
             </p>
 
             <div className="flex gap-4 justify-center flex-col sm:flex-row animate-fade-in animation-delay-400">

@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             {/* Logo */}
             <Link href="/" className="text-xl font-bold text-gray-900 hover:text-indigo-600 transition-colors">
-              Mon App
+              BegiGuide
             </Link>
 
             {/* Desktop nav */}
