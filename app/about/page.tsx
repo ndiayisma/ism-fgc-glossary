@@ -1,29 +1,36 @@
-import { Bokor } from "next/font/google";
 import { Roboto } from "next/font/google";
 
-const bokor = Bokor({ subsets: ['latin'], weight: '400' });
+import GameStyleFilter from "../components/about/GameStyleFilter";
+
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
+
+function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+    return (
+        <section id={id} className="scroll-mt-24 mt-8 rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8">
+            <h2 className={`${roboto.className} text-2xl font-bold text-white tracking-tight mb-4`}>{title}</h2>
+            {children}
+        </section>
+    );
+}
 
 export default function About() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className={`${roboto.className} text-4xl font-extrabold text-white-900 tracking-tight`}>HYDE KIDO</h1>
-        <p>Hyde est le personnage principal de la série Under Night In-Birth. Ce combattant est de type "shoto", utilisant des attaques de zonages et des techniques de combat rapproché en rapport à des situations variées.
-          <br />
-          
-          <br />
-          Il est également apprécié pour son design élégant et ses mouvements fluides, ce qui en fait un choix populaire parmi les joueurs débutants d'Under Night In-Birth.
-          <br /><br />
-          En fait j'ai crée cette page juste pour apprendre un peu le NextJs donc je n'ai pas vraiment d'inspiration pour
-          ce contenu, si ce n'est d'aider les nouveaux joueurs qui veulent se chauffer sur des jeux de combats. 
-          Que ce soit 2XKO, Street Fighter 6, Guilty Gear Stribe ou tant d'autres. <br />
-          Donc faites ce que vous en voulez, et aller dans les Locals IRL pour rencontrer des joueurs davantage
-          (Après en ligne c'est pas si mal mais après avec des potes c'est mieux, et moins rageant). <br />
-          Ah et aussi, je vous met aussi mes mains sur ces jeux, donc je vous met les liens sur les persos pour mieux vous aider.
-          (Par contre cela demande un compréhension de l'anglais, donc ami français, va faire des cours d'anglais. En + c'est même pas compliqué)
-        </p>
-      </main>
+    <div className="min-h-screen py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+        <div className="mb-8">
+          <h1 className={`${roboto.className} text-5xl font-extrabold text-white tracking-tight`}>Quel jeux choisir ?</h1>
+          <p className="mt-4 text-white/80 leading-relaxed">
+            Vous voulez débuter sur un jeu en particulier après avoir vu quelques gameplays mais ne savez pas sur lequel vous investir ou de jouer occasionnellement ?
+          </p>
+
+          <Section id="style-de-jeu" title="Par style de jeu">
+            <p className="text-lg text-white/80 leading-relaxed mb-6">
+              Les jeux de combat traditionnels misent plutôt sur des mécaniques terre-à-terre, tandis que les jeux dits "anime" ajoutent souvent plus de mobilité aérienne et de systèmes offensifs. Filtrez pour voir des exemples de chaque style :
+            </p>
+            <GameStyleFilter />
+          </Section>
+        </div>
+      </div>
     </div>
   );
 }
