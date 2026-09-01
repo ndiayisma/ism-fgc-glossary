@@ -12,7 +12,6 @@ const Navbar = () => {
 
   const navItems = [
     { href: '/', label: 'Accueil' },
-    { href: '/about', label: 'À propos' },
     {
       href: '/archetypes',
       label: 'Archétypes',
@@ -23,6 +22,7 @@ const Navbar = () => {
         { href: '/archetypes/grappler', label: 'Grappler' },
       ],
     },
+    { href: '/about', label: 'Quel jeu choisir ?' },
   ];
 
   // 1. Close mobile menu on route change
