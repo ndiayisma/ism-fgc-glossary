@@ -29,11 +29,15 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-red-800 to-orange-700">
+    <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 py-20">
         {/* Animated background elements */}
-        
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 -left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-blob"></div>
+          <div className="absolute top-1/3 -right-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-orange-500 rounded-full mix-blend-screen filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
+        </div>
 
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <h1 className={`${orbitron.className} text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 animate-fade-in`}>
@@ -71,11 +75,11 @@ export default function Home() {
             Trouvez exactement ce dont vous avez besoin
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {categories.map((category, index) => (
               <Link key={index} href={category.href}>
                 <div className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 hover:border-white/30 rounded-2xl p-8 h-full cursor-pointer transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300"></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300`}></div>
 
                   <div className="relative z-10">
                     <div className="text-5xl mb-4">{category.icon}</div>

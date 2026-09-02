@@ -10,7 +10,7 @@ export default function Footer() {
         { label: "Accueil", href: "/" },
         { label: "Guide Débutants", href: "/beginner_guide" },
         { label: "Archétypes", href: "/archetypes" },
-        { label: "À propos", href: "/about" },
+        { label: "Quel jeux choisir ?", href: "/about" },
       ],
     },
     {
@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
           <div>
-            &copy; {currentYear} Combat Hub. Tous droits réservés.
+            &copy; {currentYear} BegiGuide.
           </div>
           <div className="flex gap-6">
             <Link
