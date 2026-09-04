@@ -22,7 +22,7 @@ const Navbar = () => {
         { href: '/archetypes/grappler', label: 'Grappler' },
       ],
     },
-    { href: '/about', label: 'Quel jeu choisir ?' },
+    { href: '/choose', label: 'Quel jeu choisir ?' },
   ];
 
   // 1. Close mobile menu on route change

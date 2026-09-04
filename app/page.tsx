@@ -20,10 +20,10 @@ export default function Home() {
       color: "from-red-500 to-orange-600",
     },
     {
-      title: "À propos",
-      description: "En savoir plus sur ce site",
-      href: "/about",
-      icon: "ℹ️",
+      title: "Quel jeu choisir ?",
+      description: "Trouvez le jeu de combat fait pour vous",
+      href: "/choose",
+      icon: "🎮",
       color: "from-pink-500 to-rose-600",
     },
   ];

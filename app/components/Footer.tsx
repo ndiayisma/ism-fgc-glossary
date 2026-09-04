@@ -10,7 +10,7 @@ export default function Footer() {
         { label: "Accueil", href: "/" },
         { label: "Guide Débutants", href: "/beginner_guide" },
         { label: "Archétypes", href: "/archetypes" },
-        { label: "Quel jeux choisir ?", href: "/about" },
+        { label: "Quel jeux choisir ?", href: "/choose" },
       ],
     },
     {

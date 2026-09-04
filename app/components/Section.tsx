@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 const roboto = Roboto({ subsets: ["latin"], weight: "500" });
 
 /**
- * Bloc de contenu générique utilisé sur les pages "About" et "Guide Débutant" :
+ * Bloc de contenu générique utilisé sur les pages "Choose" et "Guide Débutant" :
  * carte translucide + titre avec un petit accent dégradé, cohérent avec
  * l'identité violet/rose utilisée sur l'accueil.
  */

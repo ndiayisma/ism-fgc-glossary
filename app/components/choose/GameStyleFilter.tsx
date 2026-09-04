@@ -34,7 +34,7 @@ type Filter = (typeof filters)[number];
 
 /**
  * Filtre par style de jeu (Traditionnel / Anime) pour la section
- * "Quel jeu choisir ?" de la page /about.
+ * "Quel jeu choisir ?" de la page /choose.
  */
 export default function GameStyleFilter() {
   const [active, setActive] = useState<Filter>("Tous");

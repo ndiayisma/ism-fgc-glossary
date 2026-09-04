@@ -1,11 +1,11 @@
 import { Roboto } from "next/font/google";
 
-import GameStyleFilter from "../components/about/GameStyleFilter";
+import GameStyleFilter from "../components/choose/GameStyleFilter";
 import Section from "../components/Section";
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
-export default function About() {
+export default function Choose() {
   return (
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
