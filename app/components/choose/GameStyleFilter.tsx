@@ -32,6 +32,14 @@ const games: Game[] = [
 const filters = ["Tous", "Traditionnel", "Anime", "Tag Team", "3D"] as const;
 type Filter = (typeof filters)[number];
 
+const categoryDescriptions: Record<Filter, string> = {
+  Tous: "Chaque famille de jeux de combat a ses propres réflexes à apprendre. Sélectionnez un style ci-dessous pour en savoir plus.",
+  Traditionnel: "Les jeux \"traditionnels\" (Street Fighter, Fatal Fury, Mortal Kombat...) misent sur un neutral au sol, des motions circulaires (quart de cercle, etc.) et une frame data serrée. Ce sont les bases du genre : ce que vous y apprenez s'applique à peu près partout ailleurs.",
+  Anime: "Les jeux \"anime\" (Guilty Gear, BlazBlue, Under Night In-Birth...) ajoutent beaucoup de mobilité aérienne (air dash, double saut) et des combos plus longs et plus techniques. La gestion des ressources (meter, burst) y compte souvent autant que le neutral.",
+  "Tag Team": "Ici, vous contrôlez une équipe de deux personnages (ou plus), avec des assists et des changements en plein combo. Plus de profondeur stratégique, mais aussi deux fois plus de choses à apprendre à la fois.",
+  "3D": "Le combat se déroule dans une arène en 3D où le déplacement latéral (sidestep) devient une arme à part entière. Le neutral, la garde et les mix-up y fonctionnent assez différemment des jeux 2D.",
+};
+
 /**
  * Filtre par style de jeu (Traditionnel / Anime) pour la section
  * "Quel jeu choisir ?" de la page /choose.
@@ -60,6 +68,11 @@ export default function GameStyleFilter() {
           </button>
         ))}
       </div>
+
+      {/* Description du style actuellement sélectionné */}
+      <p className="text-white/70 text-sm leading-relaxed max-w-2xl mx-auto text-center mb-8">
+        {categoryDescriptions[active]}
+      </p>
 
       {/* Jeux filtrés : largeur fixe + centrage, pour que les rangées incomplètes (peu de résultats après filtrage) restent centrées au lieu de coller à gauche */}
       <div className="flex flex-wrap justify-center gap-6 max-w-[54rem] mx-auto">

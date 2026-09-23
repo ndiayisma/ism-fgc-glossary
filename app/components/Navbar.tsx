@@ -12,6 +12,7 @@ const Navbar = () => {
 
   const navItems = [
     { href: '/', label: 'Accueil' },
+    { href: '/beginner-guide', label: 'Guide pour débutants' },
     {
       href: '/archetypes',
       label: 'Archétypes',

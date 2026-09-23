@@ -106,6 +106,11 @@ export default function BeginnerGuide() {
                     </Section>
 
                     <Section id="neutral" title="Neutral">
+                        <img src="/begiguide/neutral.png" alt="Neutral Position" className="mb-4 w-full max-w-md rounded-lg mx-auto" />
+                        <p className="mt-2 text-xs text-white/60 text-center">
+                            Position de départ avant un round.
+                        </p>
+                        <br />
                         <p className="text-white/80 leading-relaxed">
                             Le neutral est un terme utilisé pour décrire la phase où les joueurs sont en position neutre.
                             Avant de commencer un round, vous serez dans cet état de neutral, et le but est de chercher une ouverture pour attaquer

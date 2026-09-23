@@ -17,7 +17,7 @@ export default function Choose() {
 
           <Section id="style-de-jeu" title="Par style de jeu">
             <p className="text-lg text-white/80 leading-relaxed mb-6">
-              Les jeux de combat traditionnels misent plutôt sur des mécaniques terre-à-terre, tandis que les jeux dits "anime" ajoutent souvent plus de mobilité aérienne et de systèmes offensifs. Filtrez pour voir des exemples de chaque style :
+              Tous les jeux de combat ne se jouent pas pareil : chaque famille a ses propres réflexes et son propre rythme. Filtrez par style pour voir des exemples et comprendre à quoi vous attendre :
             </p>
             <GameStyleFilter />
           </Section>
