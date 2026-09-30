@@ -1,9 +1,20 @@
 import Link from "next/link";
 
+type FooterLink = {
+  label: string;
+  href: string;
+  target?: "_blank";
+};
+
+type FooterSection = {
+  title: string;
+  links: FooterLink[];
+};
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
+  const footerLinks: FooterSection[] = [
     {
       title: "Navigation",
       links: [
@@ -25,22 +36,22 @@ export default function Footer() {
     {
       title: "Ressources",
       links: [
-        { label: "Glossaire par Infil", href: "https://glossary.infil.net/" },
-        { label: "Dustloop(ArcSys)", href: "https://www.dustloop.com/wiki/" },
-        { label: "SuperCombo(Street Fighter)", href: "https://wiki.supercombo.gg/" },
-        { label: "Mizuumi(Autres Jeux de combat)", href: "https://mizuumi.wiki" },
-        { label: "Wavu(Tekken)", href: "https://wavu.wiki/t/Main_Page" },
-        { label: "2XKO", href: "https://wiki.play2xko.com" },
+        { label: "Glossaire par Infil", href: "https://glossary.infil.net/", target: "_blank" },
+        { label: "Dustloop(ArcSys)", href: "https://www.dustloop.com/wiki/", target: "_blank" },
+        { label: "SuperCombo(Street Fighter)", href: "https://wiki.supercombo.gg/", target: "_blank" },
+        { label: "Mizuumi(Autres Jeux de combat)", href: "https://mizuumi.wiki", target: "_blank" },
+        { label: "Wavu(Tekken)", href: "https://wavu.wiki/t/Main_Page", target: "_blank" },
+        { label: "2XKO", href: "https://wiki.play2xko.com", target: "_blank" },
       ],
     },
     {
       title: "Communauté",
       links: [
-        { label: "Discord", href: "https://discord.gg/combat-hub" },
-        { label: "Street Fighter 6", href: "https://www.reddit.com/r/CombatHub" },
-        { label: "Twitter", href: "https://twitter.com/CombatHub" },
-        { label: "YouTube", href: "https://www.youtube.com/@CombatHub" },
-        { label: "2XKOFrance", href: "https://discord.com/invite/2xkofr" },
+        { label: "Street Fighter 6", href: "https://discord.com/invite/streetfighter", target: "_blank" },
+        { label: "Fatal Fury", href: "https://twitter.com/CombatHub", target: "_blank" },
+        { label: "KOF", href: "https://discord.com/invite/dGRrJFFFPN", target: "_blank" },
+        { label: "UNI2", href: "https://discord.com/invite/vG86HET", target: "_blank" },
+        { label: "2XKOFrance", href: "https://discord.com/invite/2xkofr", target: "_blank" },
       ],
     }
   ];
@@ -64,6 +75,8 @@ export default function Footer() {
                   <li key={linkIndex}>
                     <Link
                       href={link.href}
+                      target={link.target}
+                      rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
                       className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
                     >
                       {link.label}

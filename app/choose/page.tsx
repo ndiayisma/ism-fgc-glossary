@@ -17,7 +17,7 @@ export default function Choose() {
 
           <Section id="style-de-jeu" title="Par style de jeu">
             <p className="text-lg text-white/80 leading-relaxed mb-6">
-              Tous les jeux de combat ne se jouent pas pareil : chaque famille a ses propres réflexes et son propre rythme. Filtrez par style pour voir des exemples et comprendre à quoi vous attendre :
+              Tous les jeux de combat ne se jouent pas pareil : chaque jeu a ses propres réflexes et son propre rythme. Filtrez par style pour voir des exemples et comprendre à quoi vous attendre :
             </p>
             <GameStyleFilter />
           </Section>
