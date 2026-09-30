@@ -46,7 +46,17 @@ const categoryDescriptions: Record<Filter, string> = {
  */
 export default function GameStyleFilter() {
   const [active, setActive] = useState<Filter>("Tous");
+  const [fading, setFading] = useState(false);
   const visibleGames = active === "Tous" ? games : games.filter((g) => g.category === active);
+
+  const handleSelect = (f: Filter) => {
+    if (f === active) return;
+    setFading(true);
+    setTimeout(() => {
+      setActive(f);
+      setFading(false);
+    }, 200);
+  };
 
   return (
     <div>
@@ -56,7 +66,7 @@ export default function GameStyleFilter() {
           <button
             key={f}
             type="button"
-            onClick={() => setActive(f)}
+            onClick={() => handleSelect(f)}
             aria-pressed={active === f}
             className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 ${
               active === f
@@ -69,31 +79,33 @@ export default function GameStyleFilter() {
         ))}
       </div>
 
-      {/* Description du style actuellement sélectionné */}
-      <p className="text-white/70 text-sm leading-relaxed max-w-2xl mx-auto text-center mb-8">
-        {categoryDescriptions[active]}
-      </p>
+      {/* Description + jeux filtrés : fondu enchaîné lors du changement de style */}
+      <div className={`transition-opacity duration-200 ${fading ? "opacity-0" : "opacity-100"}`}>
+        <p className="text-white/70 text-sm leading-relaxed max-w-2xl mx-auto text-center mb-8">
+          {categoryDescriptions[active]}
+        </p>
 
-      {/* Jeux filtrés : largeur fixe + centrage, pour que les rangées incomplètes (peu de résultats après filtrage) restent centrées au lieu de coller à gauche */}
-      <div className="flex flex-wrap justify-center gap-6 max-w-[54rem] mx-auto">
-        {visibleGames.map((game) => (
-          <div
-            key={game.name}
-            className="group flex flex-col items-center gap-3 w-40 sm:w-48 rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
-          >
-            <div className="w-full aspect-[2/3] overflow-hidden rounded-lg bg-white/5">
-              <img
-                src={game.logo}
-                alt={`Jaquette de ${game.name}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
+        {/* Jeux filtrés : largeur fixe + centrage, pour que les rangées incomplètes (peu de résultats après filtrage) restent centrées au lieu de coller à gauche */}
+        <div className="flex flex-wrap justify-center gap-6 max-w-[54rem] mx-auto">
+          {visibleGames.map((game) => (
+            <div
+              key={game.name}
+              className="group flex flex-col items-center gap-3 w-40 sm:w-48 rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="w-full aspect-[2/3] overflow-hidden rounded-lg bg-white/5">
+                <img
+                  src={game.logo}
+                  alt={`Jaquette de ${game.name}`}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>
+                {game.name}
+              </p>
+              <span className="text-xs text-white/50 uppercase tracking-wide">{game.category}</span>
             </div>
-            <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>
-              {game.name}
-            </p>
-            <span className="text-xs text-white/50 uppercase tracking-wide">{game.category}</span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

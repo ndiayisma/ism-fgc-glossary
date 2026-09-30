@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 
 import GameStyleFilter from "../components/choose/GameStyleFilter";
 import Section from "../components/Section";
+import FadeIn from "../components/FadeIn";
 
 const roboto = Roboto({ subsets: ['latin'], weight: '500' });
 
@@ -10,17 +11,21 @@ export default function Choose() {
     <div className="min-h-screen py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="mb-8">
-          <h1 className={`${roboto.className} text-5xl font-extrabold text-white tracking-tight`}>Quel jeux choisir ?</h1>
-          <p className="mt-4 text-white/80 leading-relaxed">
-            Vous voulez débuter sur un jeu en particulier après avoir vu quelques gameplays mais ne savez pas sur lequel vous investir ou de jouer occasionnellement ?
-          </p>
-
-          <Section id="style-de-jeu" title="Par style de jeu">
-            <p className="text-lg text-white/80 leading-relaxed mb-6">
-              Tous les jeux de combat ne se jouent pas pareil : chaque jeu a ses propres réflexes et son propre rythme. Filtrez par style pour voir des exemples et comprendre à quoi vous attendre :
+          <FadeIn>
+            <h1 className={`${roboto.className} text-5xl font-extrabold text-white tracking-tight`}>Quel jeux choisir ?</h1>
+            <p className="mt-4 text-white/80 leading-relaxed">
+              Vous voulez débuter sur un jeu en particulier après avoir vu quelques gameplays mais ne savez pas sur lequel vous investir ou de jouer occasionnellement ?
             </p>
-            <GameStyleFilter />
-          </Section>
+          </FadeIn>
+
+          <FadeIn delay={150}>
+            <Section id="style-de-jeu" title="Par style de jeu">
+              <p className="text-lg text-white/80 leading-relaxed mb-6">
+                Tous les jeux de combat ne se jouent pas pareil : chaque jeu a ses propres réflexes et son propre rythme. Filtrez par style pour voir des exemples et comprendre à quoi vous attendre :
+              </p>
+              <GameStyleFilter />
+            </Section>
+          </FadeIn>
         </div>
       </div>
     </div>
