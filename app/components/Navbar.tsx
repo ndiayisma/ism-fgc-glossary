@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const navItems = [
     { href: '/', label: 'Accueil' },
-    { href: '/beginner-guide', label: 'Guide pour débutants' },
+    { href: '/beginner_guide', label: 'Guide pour débutants' },
     {
       href: '/archetypes',
       label: 'Archétypes',
@@ -137,7 +137,7 @@ const Navbar = () => {
           <div className="sm:hidden flex items-center">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-400 transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-400 transition-all duration-200 active:scale-90"
               aria-controls="mobile-menu"
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

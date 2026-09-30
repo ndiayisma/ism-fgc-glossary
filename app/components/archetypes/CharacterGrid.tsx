@@ -32,14 +32,14 @@ export default function CharacterGrid({
         {characters.map((char) => (
           <div
             key={char.name}
-            className="flex flex-col items-center gap-3 w-32 sm:w-36 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
+            className="group flex flex-col items-center gap-3 w-32 sm:w-36 rounded-xl bg-white/5 border border-white/10 p-4 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
           >
             {/* 1. Character Portrait */}
             <div className="relative w-22 h-22 sm:w-24 sm:h-24 overflow-hidden rounded-lg bg-white/5">
               <img
                 src={char.portrait}
                 alt={`Portrait de ${char.name}`}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
@@ -52,7 +52,7 @@ export default function CharacterGrid({
             <img
               src={char.gameLogo}
               alt={`Logo ${char.game}`}
-              className="h-12 w-auto object-contain opacity-70"
+              className="h-12 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100"
             />
           </div>
         ))}

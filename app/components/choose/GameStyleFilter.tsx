@@ -58,7 +58,7 @@ export default function GameStyleFilter() {
             type="button"
             onClick={() => setActive(f)}
             aria-pressed={active === f}
-            className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all cursor-pointer ${
+            className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 ${
               active === f
                 ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white border-transparent shadow-lg shadow-purple-500/20"
                 : "bg-white/5 text-white/80 border-white/10 hover:bg-white/10 hover:border-white/20"
@@ -79,13 +79,13 @@ export default function GameStyleFilter() {
         {visibleGames.map((game) => (
           <div
             key={game.name}
-            className="flex flex-col items-center gap-3 w-40 sm:w-48 rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
+            className="group flex flex-col items-center gap-3 w-40 sm:w-48 rounded-xl bg-white/5 border border-white/10 p-3 hover:bg-white/10 hover:border-purple-400/40 hover:-translate-y-1 transition-all duration-300"
           >
             <div className="w-full aspect-[2/3] overflow-hidden rounded-lg bg-white/5">
               <img
                 src={game.logo}
                 alt={`Jaquette de ${game.name}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
             <p className={`${roboto.className} text-sm font-semibold text-white text-center leading-tight`}>

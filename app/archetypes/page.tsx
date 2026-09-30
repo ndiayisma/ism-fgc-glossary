@@ -56,7 +56,7 @@ export default function Page() {
                 className="group"
               >
                 <button
-                  className="overflow-hidden relative w-full h-64 bg-black text-white border border-white/10 hover:border-white/30 rounded-xl text-3xl font-bold cursor-pointer z-10 group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                  className="overflow-hidden relative w-full h-64 bg-black text-white border border-white/10 hover:border-white/30 rounded-xl text-3xl font-bold cursor-pointer z-10 group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98]"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${archetype.icon})`,
                     backgroundSize: 'cover',

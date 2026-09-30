@@ -51,13 +51,13 @@ export default function Home() {
             <div className="flex gap-4 justify-center flex-col sm:flex-row animate-fade-in animation-delay-400">
               <Link
                 href="/beginner_guide"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 shadow-lg"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 active:scale-95 shadow-lg"
               >
                 Commencer
               </Link>
               <Link
                 href="/archetypes"
-                className="px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400/10 rounded-lg font-semibold transition-all transform hover:scale-105"
+                className="px-8 py-4 border-2 border-purple-400 text-purple-300 hover:bg-purple-400/10 rounded-lg font-semibold transition-all transform hover:scale-105 active:scale-95"
               >
                 Explorer les Archétypes
               </Link>
@@ -111,7 +111,7 @@ export default function Home() {
           </p>
           <Link
             href="/beginner_guide"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 shadow-lg"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 rounded-lg font-semibold text-white transition-all transform hover:scale-105 active:scale-95 shadow-lg"
           >
             Démarrer maintenant
           </Link>
