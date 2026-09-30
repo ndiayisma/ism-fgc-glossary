@@ -58,9 +58,9 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-white/10 bg-gradient-to-b from-transparent to-black/20 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-8 mb-12">
           {/* Brand Section */}
           
 
@@ -94,11 +94,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-gray-400 text-sm text-center">
           <div>
             &copy; {currentYear} BegiGuide.
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
             <Link
               href="#"
               className="hover:text-purple-400 transition-colors"

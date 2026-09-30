@@ -29,7 +29,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-4 py-20">
         {/* Animated background elements */}
